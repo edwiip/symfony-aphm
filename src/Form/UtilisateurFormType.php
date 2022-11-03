@@ -36,7 +36,9 @@ class UtilisateurFormType extends AbstractType
             ])
             ->add('message')
             ->add('service')
-            ->add('submit', SubmitType::class);
+            ->add('submit', SubmitType::class, [
+                'label' => "envoyer"
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
