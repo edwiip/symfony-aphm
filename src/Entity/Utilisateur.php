@@ -123,4 +123,11 @@ class Utilisateur
 
         return $this;
     }
+
+    // function
+
+    public function __toString(): string
+    {
+        return $this->nom . " - " . $this->email;
+    }
 }

@@ -21,6 +21,9 @@ class Service
     #[ORM\OneToMany(mappedBy: 'service', targetEntity: Utilisateur::class, orphanRemoval: true)]
     private Collection $utilisateurs;
 
+    #[ORM\Column(length: 255)]
+    private ?string $email = null;
+
     public function __construct()
     {
         $this->utilisateurs = new ArrayCollection();
@@ -69,6 +72,25 @@ class Service
                 $utilisateur->setService(null);
             }
         }
+
+        return $this;
+    }
+
+    // functions
+
+    public function __toString(): string
+    {
+        return $this->nom . " " . $this->email;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }
