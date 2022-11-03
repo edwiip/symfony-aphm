@@ -30,30 +30,34 @@
         <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
             <div class="container">
                 <section class="py-7">
-                    {{ form_start(userForm) }}
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.nom, {'attr': {'class': 'form-control'}}) }}
+                    <div class="row">
+                        {{ form_start(userForm) }}
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.nom, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.prenom, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.telephone, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.email, {'attr': {'class': 'form-control'}}) }}
+                        </div>
                     </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.prenom, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.telephone, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.email, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.piecejointe, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.message, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.service, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        {{ form_row(userForm.submit, {'attr': {'class': 'form-control'}}) }}
+                    <div class="row">
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.piecejointe, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.message, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.service, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="input-group input-group-dynamic mb-4">
+                            {{ form_row(userForm.submit, {'attr': {'class': 'form-control'}}) }}
+                        </div>
                     </div>
                     {{ form_end(userForm) }}
                 </section>
