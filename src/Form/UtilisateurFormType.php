@@ -25,7 +25,8 @@ class UtilisateurFormType extends AbstractType
             ->add('prenom', TextType::class, ['label' => "Votre prénom", 'required' => true])
             ->add('telephone', TelType::class, ['label' => "voytre numéro de téléphone", 'required' => true])
             ->add('email', EmailType::class, ['label' => "Indiquez une adresse email valide", 'required' => true])
-            ->add('piecejointe', null, [
+            ->add('piecejointe', FileType::class, [
+                'mapped' => false,
                 'label' => "Ajouter mon CV"
             ])
             ->add('message', TextareaType::class)
